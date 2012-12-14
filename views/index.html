@@ -32,7 +32,7 @@
 <body>
 	<div class="container-fluid">
 		<div class="page-header">
-	    	<h1 style="display:inline;">Webdrobe <small>Group 7</small></h1>
+	    	<h1 style="display:inline;">Webdrobe <small>By: Wildcard, Bitches</small></h1>
 	    	<p class="pull-right" style="display:inline;">Welcome, Doodman Friedrichson</p>
 	    </div>
 	    <div class="tabbable">
@@ -55,67 +55,67 @@
 							</br>
 							<h3>Filter By:</h3>
 							<div class="btn-group">
-								<button class="btn btn-large">Occasion</button>
+								<button class="btn btn-large dropdown-target1">Occasion</button>
 								<button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
 								<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
 									<li>
-										<a href="#">Beach</a>
+										<a class="dropdown-item1" href="#">Beach</a>
 									</li>
 									<li>
-										<a href="#">Formal</a>
+										<a class="dropdown-item1" href="#">Formal</a>
 									</li>
 									<li>
-										<a href="#">Casual</a>
+										<a class="dropdown-item1" href="#">Casual</a>
 									</li>
 									<li>
-										<a href="#">Holiday</a>
+										<a class="dropdown-item1" href="#">Holiday</a>
 									</li>
 									<li>
-										<a href="#">Spring</a>
+										<a class="dropdown-item1" href="#">Spring</a>
 									</li>
 									<li>
-										<a href="#">Summer</a>
+										<a class="dropdown-item1" href="#">Summer</a>
 									</li>
 									<li>
-										<a href="#">Fall</a>
+										<a class="dropdown-item1" href="#">Fall</a>
 									</li>
 									<li>
-										<a href="#">Winter</a>
+										<a class="dropdown-item1" href="#">Winter</a>
 									</li>
 								</ul>
 							</div>
 							</br>
 							<div class="btn-group">
-								<button class="btn btn-large">Weather</button>
+								<button class="btn btn-large dropdown-target2">Weather</button>
 								<button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
 									<li>
-										<a href="#">Rain</a>
+										<a class="dropdown-item2" href="#">Rain</a>
 									</li>
 									<li>
-										<a href="#">Snow</a>
+										<a class="dropdown-item2" href="#">Snow</a>
 									</li>
 									<li>
-										<a href="#">Sunny</a>
+										<a class="dropdown-item2" href="#">Sunny</a>
 									</li>
 									<li>
-										<a href="#">Windy</a>
+										<a class="dropdown-item2" href="#">Windy</a>
 									</li>
 									<li>
-										<a href="#">Tsunami</a>
+										<a class="dropdown-item2" href="#">Tsunami</a>
 									</li>
 									<li>
-										<a href="#">Hurricane</a>
+										<a class="dropdown-item2" href="#">Hurricane</a>
 									</li>
 									<li>
-										<a href="#">Tornado</a>
+										<a class="dropdown-item2" href="#">Tornado</a>
 									</li>
 									<li>
-										<a href="#">Armeggedon</a>
+										<a class="dropdown-item2" href="#">Armeggedon</a>
 									</li>
 								</ul>
 							</div>	
@@ -126,20 +126,19 @@
 								<img id="pants" width="320" height="200" src="images/khakis.jpg">
 								<div class="caption">
 									<h3>Recommended Outfit</h3>
-									<p></p>
-									<p>
+									<div id="details-text"></div>
 									<div class="btn-group">
-										<a class="btn btn-large btn-block btn-info" href="#">Details</a>
+										<a id="details-btn" data-toggle="button" class="btn btn-large btn-block btn-info" href="#">Details</a>
 										<a class="btn btn-large btn-block btn-success" data-toggle="button" href="javascript:void(0)"><i class="icon-heart"></i> Favorite</a>
 									</div>
-									</p>
+
 								</div>
 							</div>
 						</div>
 						<div class="span2">
 							<div class="btn-group btn-group-vertical button-container">
 									<button data-toggle="button" class="btn btn-large btn-info"><i class="icon-thumbs-up"></i> Like</button></br>
-									<button class="btn btn-large" id="rating">75%</button></br>
+									<a href="#" data-placement="right" rel="tooltip" title="This is our rating based on your personal preferences"><button id="rating" class="btn btn-large btn-link" id="rating">75%</button></a></br>
 									<button data-toggle="button" class="btn btn-large btn-inverse"><i class="icon-thumbs-down"></i> Dislike</button>
 							</div>
 						</div>
@@ -153,13 +152,53 @@
 								<form class="form">
 									<legend>Upload An Image</legend>
 									<span class="help-block"><p class="text-warning">Choose One</p></span>
-								    <div class="control-group">
+									<div class="tabbable">
+		    							<ul class="nav nav-pills">
+		    								<li class="active">
+			    								<a data-toggle="tab" href="#subtab1"> Web</a>
+			   								</li>
+			    							<li><a data-toggle="tab" href="#subtab2"> Computer</a></li>
+			    							<li><a data-toggle="tab" href="#subtab3"> Camera</a></li>
+			    						</ul>
+			    						<div class="tab-content">
+											<div class="tab-pane active" id="subtab1">
+												<div class="control-group">
+												    <label class="control-label" for="inputURL">Web</label>
+												    <div class="controls">
+													    <input type="text" id="inputURL" placeholder="Enter a URL from the Web">
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane" id="subtab2">
+												<div class="control-group">
+												    <label class="control-label" for="inputUpload">Computer</label>
+												    <div class="controls">
+													    <div class="input-append">
+													    	<input type="text" id="inputUpload" placeholder="Upload a file from your computer">
+													    	<button class="btn"><i class="icon-picture"></i> Browse</button>
+													    </div>
+													    <!--ACTUAL UPLOAD FUNCTION input type="file" name="uploadField" placeholder="Upload a file from your computer"/-->
+											    	</div>
+										    	</div>
+											</div>
+											<div class="tab-pane" id="subtab3">
+												<div class="control-group">
+											    	<label class="control-label" for="inputPicture">Take Picture</label>
+											    	<div class="controls">
+												    	<button id="btn-camera" class="btn"><i class="icon-camera"></i> Camera</button>
+													</div>
+												</div>
+											</div>
+										</div>
+			    					</div>
+
+
+								    <!--div class="control-group">
 									    <label class="control-label" for="inputURL">Web</label>
 									    <div class="controls">
 										    <input type="text" id="inputURL" placeholder="Enter a URL from the Web">
 										</div>
 									</div>
-									<!--span class="help-block"><p class="text-info">OR</p></span-->
 									<div class="control-group">
 									    <label class="control-label" for="inputUpload">Computer</label>
 									    <div class="controls">
@@ -167,18 +206,17 @@
 										    	<input type="text" id="inputUpload" placeholder="Upload a file from your computer">
 										    	<button class="btn"><i class="icon-picture"></i> Browse</button>
 										    </div>
-										    <!--ACTUAL UPLOAD FUNCTION input type="file" name="uploadField" placeholder="Upload a file from your computer"/-->
 								    	</div>
 							    	</div>
-							    	<!--span class="help-block"><p class="text-info">OR</p></span-->
 							    	<div class="control-group">
 									    <label class="control-label" for="inputPicture">Take Picture</label>
 									    <div class="controls">
 										    <button id="btn-camera" class="btn"><i class="icon-camera"></i> Camera</button>
 										</div>
-									</div>
+									</div-->
 							    </form>
 							    <button id="upload-btn" class="btn btn-large btn-block btn-primary"><i class="icon-upload"></i> Upload</button>
+
 							</div>
 							<div class="span4 offset1">
 								<div class="thumbnail">
@@ -200,20 +238,22 @@
 								<div class="row-fluid">
 									<label>Filter Items</label>
 									<input type="text" placeholder="Enter tags...">
+									<button id="filter2" class="btn btn-large btn-block btn-info"><i class="icon-search"></i> Filter</button></br>
 								</div>
 								<div class="row-fluid">
 									<h3>Your Outfit:</h3>
 									<div id="side-images">
-										<!--img class="img-polaroid" src="http://placehold.it/140x140">
-										<img class="img-polaroid" src="http://placehold.it/140x140">
-										<img class="img-polaroid" src="http://placehold.it/140x140"-->
+										<div class="thumbnail">
+											<img id="upload-pic" src="http://placehold.it/240x140" alt="">
+										</div>
 									</div>
 									</br></br>
-									<button class="btn btn-large btn-block btn-success"><i class="icon-plus"></i> Add New Item<button>
+									<button id="rate-btn" class="btn btn-large btn-block btn-success"><i class="icon-hand-right"></i> Rate This Outfit<button>
 								</div>
 							</div>
 							<div class="span9 offset1">
-								<div class="row">
+								<div id="rating-location" class="row">
+									<p class="lead text-info">Click Items To Add Them To Your Outfit</p>
 									<ul class="thumbnails">
 										<li class="span3">
 											<a class="thumbnail" href="#">
@@ -302,7 +342,31 @@
 							</div>
 							<div class="span9 offset1">
 								<div class="row">
+									<div class="alert alert-success">
+										<button type="button" class="close" data-dismiss="alert">&times;</button>
+										<h4>Success</h4>
+										Item successfully added to wardrobe!
+    								</div>
 									<ul id="filter-items" class="thumbnails">
+										<li class="span3">
+											<a class="thumbnail" href="#">
+												<img alt="" src="images/pink-blazer.jpg">
+											</a>
+										</li>
+										<li class="span3">
+											<a class="thumbnail" href="#">
+												<img alt="" src="images/jeans.jpg">
+											</a>
+										</li>
+										<li class="span3">
+											<a class="thumbnail" href="#">
+												<img alt="" src="images/turquoise-polo.jpg">
+											</a>
+										</li><li class="span3">
+											<a class="thumbnail" href="#">
+												<img alt="" src="images/yellow-jacket.jpg">
+											</a>
+										</li>
 										<li class="span3">
 											<a class="thumbnail" href="#">
 												<img alt="" src="images/black-pants.jpg">
@@ -332,28 +396,12 @@
 											</a>
 										</li><li class="span3">
 											<a class="thumbnail" href="#">
-												<img alt="" src="images/jeans.jpg">
-											</a>
-										</li><li class="span3">
-											<a class="thumbnail" href="#">
 												<img alt="" src="images/khakis.jpg">
-											</a>
-										</li><li class="span3">
-											<a class="thumbnail" href="#">
-												<img alt="" src="images/pink-blazer.jpg">
 											</a>
 										</li>
 										<li class="span3">
 											<a class="thumbnail" href="#">
 												<img alt="" src="images/purple-pants.jpg">
-											</a>
-										</li><li class="span3">
-											<a class="thumbnail" href="#">
-												<img alt="" src="images/turquoise-polo.jpg">
-											</a>
-										</li><li class="span3">
-											<a class="thumbnail" href="#">
-												<img alt="" src="images/yellow-jacket.jpg">
 											</a>
 										</li>
 									</ul>

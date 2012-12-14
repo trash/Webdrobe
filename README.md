@@ -1,4 +1,4 @@
-import files are :
+** important files are :
 * views/index.html
 * views/login.html
-* static/javascripts/client.js
+* public/javascripts/client.js

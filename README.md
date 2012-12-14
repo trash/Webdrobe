@@ -1,4 +1,4 @@
-** important files are :
-* views/index.html
-* views/login.html
-* public/javascripts/client.js
+### Important files are :
+* views/index.html - home page
+* views/login.html - login page
+* public/javascripts/client.js - clientside javascript for interactions
